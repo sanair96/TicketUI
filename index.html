@@ -6,19 +6,39 @@
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-
+<button style="position: absolute; top: 15%; left: 	15%;" onclick="change();">Click Me</button>
 <center>
 <span id="number" class="common">12345</span>
 <img src="tb.jpg">
 <div class=".common" id="price">
 <span class="amount">INR 200</span>
 <span class="notimp">Marathon Registration TCC</span>
-<span class="notimp move" style="font-size: 1.1em">+</span>
-<span class="amount">INR 100</span>
-<span class="notimp">Tickets + Official Tee</span>
-<span class="amount">INR 300</span>
+<span class="notimp move optTee" style="font-size: 1.1em">+</span>
+<span class="amount optTee">INR 100</span>
+<span class="notimp optTee">Tickets + Official Tee</span>
+<span class="amount" id="optThree">INR 300</span>
 </div>
 </center>
 
 </body>
+<script type="text/javascript">
+	var type =1;
+	var optThree=  document.getElementById("optThree");
+	var optTee = document.getElementsByClassName("optTee");
+	function change(){
+		type = type==1?0:1;
+		if(type){
+				for(i=0;i<optTee.length;i++){
+					optTee[i].style.display = "initial";
+				}
+				optThree.style.display = "initial";
+		}
+		else{
+			for(i=0;i<optTee.length;i++){
+					optTee[i].style.display = "none";
+				}
+				optThree.style.display = "none";
+		}
+	}
+</script>
 </html>
