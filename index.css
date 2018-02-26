@@ -42,3 +42,7 @@ position: absolute;
 img{
   height: 100vh;
 }
+
+.optTee, #optThree, #optTwo {
+  display: none;
+}
